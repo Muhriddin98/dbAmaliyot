@@ -11,7 +11,7 @@ class CompanysController extends BaseController
         $faker = Faker::create();
         for ($i=0; $i<100; $i++){
             $name[$i] = $faker->company();
-            $balance[$i] = rand(1,99)*1000000;
+            $balance[$i] = rand(10,99)*1000000;
             DB::table('companys')->insert([
                 'name'=>$name[$i],
                 'account_balance'=>$balance[$i]

@@ -14,7 +14,7 @@ class UsersController extends BaseController
             $first_name[$i] = $faker->firstName($gender[$i]);
             $last_name[$i] = $faker->lastName();
             $email[$i] = $faker->email();
-            $balance[$i] = rand(1,99)*1000000;
+            $balance[$i] = rand(10,99)*1000000;
             $birthdate[$i] = $faker->dateTimeBetween('-40 years', '-25 years')->format('Y-m-d');
             DB::table('users')->insert([
                 'firstname'=>$first_name[$i],

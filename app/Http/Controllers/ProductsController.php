@@ -11,11 +11,11 @@ class ProductsController extends BaseController
     public function add(){
         $faker = Faker::create();
         for ($i=0; $i<1000; $i++){
-            $category_id[$i] = rand(1,30);
+            $category_id[$i] = rand(1,50);
             $company_id[$i] = rand(1,100);
             $name[$i] = $faker->word()." ".$faker->colorName();
-            $price[$i] = rand(50,999)*1000;
-            $total_amount[$i] = rand(1,99)*100;
+            $price[$i] = rand(10,99)*1000;
+            $total_amount[$i] = rand(10,99)*10;
             DB::table('products')->insert([
                 'category_id'=>$category_id[$i],
                 'company_id'=>$company_id[$i],

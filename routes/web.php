@@ -13,10 +13,12 @@
 |
 */
 
-//$router->get('/', 'ExampleController@index');
+$router->get('/', function (){
+    return app()->version();
+});
 $router->get('users/add','UsersController@add');
 $router->get('categorys/add','CategorysController@add');
 $router->get('companys/add','CompanysController@add');
 $router->get('products/add','ProductsController@add');
 $router->post('orders/add', 'OrdersController@add');
-
+//$router->post('test','TransactionsController@test');

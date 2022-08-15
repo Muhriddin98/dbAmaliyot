@@ -8,7 +8,7 @@ class CategorysController extends BaseController
 {
     public function add(){
         $faker = Faker::create();
-        for ($i=0; $i<30; $i++){
+        for ($i=0; $i<50; $i++){
             $name[$i] = $faker->streetName();
             DB::table('categorys')->insert([
                 'name'=>$name[$i]
