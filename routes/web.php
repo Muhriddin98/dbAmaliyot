@@ -24,3 +24,6 @@ $router->get('/', function (){
 //$router->post('orders/add', 'OrdersController@add');
 //$router->post('test','TransactionsController@test');
 $router->post('extjs/add','ExtjsController@add');
+$router->get('extjs/show','ExtjsController@show');
+$router->put('extjs/show/{id}','ExtjsController@update');
+$router->get('extjs/delete','ExtjsController@delete');
